@@ -4,53 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lawrence Abrio Agan - Portfolio</title>
-    <!-- Add the Inter font -->
+    
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <!-- Link to your CSS file -->
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <!-- HEADER -->
     <header>
         <img src="images/img/profile.jpg" alt="Profile Picture" class="profile-img">
         <h1>Lawrence Abrio Agan</h1>
         <p>Web Developer | Designer | Computer Programmer | IT Student</p>
     </header>
 
+    <!-- NAVIGATION -->
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#subjects">Subjects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
+    <!-- ABOUT SECTION -->
     <section id="about">
         <h2>About Me</h2>
-        <p>Hello! I'm Lawrence Agan, a UI/UX Designer, Web Developer, and Computer Programmer specializing in Python and Java. Currently, I'm pursuing my studies at the University of Science and Technology of Southern Philippines. With a passion for creating beautiful, functional websites and innovative applications, I combine technical expertise with creative design thinking to deliver exceptional digital experiences.</p>
+        <p>Hello! I'm Lawrence Agan, a UI/UX Designer, Web Developer, and Computer Programmer specializing in Python and Java. 
+        Currently, I'm pursuing my studies at the University of Science and Technology of Southern Philippines.</p>
     </section>
 
+    <!-- PROJECTS SECTION -->
     <section id="projects">
         <h2>My Projects</h2>
         <div class="projects">
             <div class="project-card">
-                <img src="images/img/project1.png" alt="FoxWAVE Project" class="project-img project1">
+                <img src="images/img/project1.png" alt="FoxWAVE Project" class="project-img">
                 <h3>FoxWAVE</h3>
-                <p>FoxWAVE is a sophisticated music application designed to enhance your music listening experience. It combines elegant simplicity with powerful features to make managing and enjoying your favorite tracks effortless and intuitive.</p>
+                <p>A music application that enhances your listening experience with an intuitive interface.</p>
             </div>
             <div class="project-card">
-                <img src="images/img/project2.png" alt="USTP E-Library Project" class="project-img project2">
+                <img src="images/img/project2.png" alt="USTP E-Library Project" class="project-img">
                 <h3>USTP E-Library</h3>
-                <p>A comprehensive digital library system featuring:
-                <br>• Digital Repository with thousands of e-books and research papers
-                <br>• Advanced search and filtering capabilities
-                <br>• Intuitive, mobile-responsive interface
-                <br>• Personalized user accounts with bookmarking
-                <br>• Collaborative tools for academic discussion</p>
+                <p>A digital library system featuring e-books, research papers, and advanced search tools.</p>
             </div>
         </div>
     </section>
 
+    <!-- SKILLS SECTION -->
     <section id="skills">
         <h2>Skills</h2>
         <div class="skills">
@@ -64,6 +69,29 @@
         </div>
     </section>
 
+    <!-- SUBJECTS TAKEN SECTION -->
+    <section id="subjects">
+        <h2>Subjects Taken</h2>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search by subject name...">
+        </div>
+        <table id="subjects-table" border="1">
+            <thead>
+                <tr>
+                    <th>Year Level</th>
+                    <th>Semester</th>
+                    <th>Code</th>
+                    <th>Description</th>
+                    <th>Credit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be loaded dynamically -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- CONTACT SECTION -->
     <section id="contact">
         <h2>Contact Me</h2>
         <form class="contact-form">
@@ -79,27 +107,14 @@
             <button type="submit">Send Message</button>
         </form>
     </section>
+
+    <!-- FOOTER -->
     <footer>
         <p>© 2025 Lawrence Abrio Agan. All rights reserved.</p>
         <p>Email: your.email@example.com</p>
-        <section id="subjects">
-    <h2>Subjects Taken</h2>
-    <table id="subjects-table" border="1">
-        <thead>
-            <tr>
-                <th>Year Level</th>
-                <th>Semester</th>
-                <th>Code</th>
-                <th>Description</th>
-                <th>Credit</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
-</section>
-
     </footer>
+
+    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
