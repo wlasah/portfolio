@@ -3,14 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const tableBody = document.querySelector("#subjects-table tbody");
     const searchInput = document.getElementById("searchInput");
-    const jsonUrl = "https://wlasah.github.io/portfolio/courses.json"; // Correct JSON URL
+    const jsonUrl = "https://wlasah.github.io/portfolio/courses.json";
 
     if (!tableBody) {
         console.error("Error: Table body not found!");
         return;
     }
 
-    // Fetch the subjects from JSON
     fetch(jsonUrl)
         .then(response => {
             if (!response.ok) throw new Error("Network response was not ok " + response.statusText);
@@ -23,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => console.error("Error fetching the JSON file:", error));
 
     function loadSubjects(courses) {
-        tableBody.innerHTML = ""; // Clear existing rows
+        tableBody.innerHTML = "";
 
         courses.forEach(course => {
             const row = document.createElement("tr");
@@ -37,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
             tableBody.appendChild(row);
         });
 
-        // Enable search functionality
         searchInput.addEventListener("input", function () {
             const searchTerm = searchInput.value.toLowerCase();
             const rows = tableBody.getElementsByTagName("tr");
