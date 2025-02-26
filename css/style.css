@@ -1,3 +1,4 @@
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +13,7 @@ body {
     background-color: #f8f9fa;
 }
 
-/* Enhanced Header */
+/* Header Section */
 header {
     background: linear-gradient(135deg, #2c3e50, #3498db);
     color: white;
@@ -22,17 +23,6 @@ header {
     overflow: hidden;
 }
 
-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='rgba(255,255,255,0.05)' fill-rule='evenodd'/%3E%3C/svg%3E");
-    opacity: 0.1;
-}
-
 header h1 {
     font-size: 2.5rem;
     margin: 1rem 0;
@@ -40,12 +30,11 @@ header h1 {
 }
 
 .profile-img {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    margin: 2rem 0;
     object-fit: cover;
-    border: 6px solid rgba(255, 255, 255, 0.3);
+    border: 5px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
@@ -55,7 +44,7 @@ header h1 {
     border-color: rgba(255, 255, 255, 0.5);
 }
 
-/* Improved Navigation */
+/* Navigation Bar */
 nav {
     background: rgba(52, 73, 94, 0.95);
     padding: 1rem;
@@ -84,26 +73,11 @@ nav a {
     transition: color 0.3s ease;
 }
 
-nav a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #3498db;
-    transition: width 0.3s ease;
-}
-
 nav a:hover {
     color: #3498db;
 }
 
-nav a:hover::after {
-    width: 100%;
-}
-
-/* Enhanced Sections */
+/* Sections */
 section {
     padding: 6rem 2rem;
     max-width: 1200px;
@@ -113,7 +87,7 @@ section {
 
 section h2 {
     color: #2c3e50;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     font-size: 2.2rem;
     text-align: center;
     position: relative;
@@ -128,7 +102,7 @@ section h2::after {
     margin: 1rem auto;
 }
 
-/* Improved Project Cards */
+/* Project Cards */
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -141,7 +115,6 @@ section h2::after {
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
-    overflow: hidden;
 }
 
 .project-card:hover {
@@ -156,18 +129,6 @@ section h2::after {
     transition: transform 0.3s ease;
 }
 
-.project-img.project1 {
-    width: 367px;
-    height: 653px;
-    object-fit: cover;
-}
-
-.project-img.project2 {
-    width: 512px;
-    height: 320px;
-    object-fit: cover;
-}
-
 .project-card:hover .project-img {
     transform: scale(1.03);
 }
@@ -178,7 +139,7 @@ section h2::after {
     font-size: 1.4rem;
 }
 
-/* Enhanced Skills Section */
+/* Skills */
 .skills {
     display: flex;
     flex-wrap: wrap;
@@ -198,11 +159,59 @@ section h2::after {
 
 .skill-tag:hover {
     transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     background: #2980b9;
 }
 
-/* Improved Contact Form */
+/* Subjects Taken Section */
+#subjects {
+    text-align: center;
+}
+
+.search-box {
+    margin-bottom: 2rem;
+}
+
+#searchInput {
+    width: 60%;
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Subjects Table */
+#subjects-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow-x: auto;
+    border-radius: 12px;
+}
+
+#subjects-table th, #subjects-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#subjects-table th {
+    background: #2c3e50;
+    color: white;
+}
+
+#subjects-table tr:hover {
+    background: #f1f1f1;
+}
+
+/* Contact Form */
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
@@ -222,8 +231,8 @@ input, textarea {
     border: 2px solid #e0e0e0;
     border-radius: 8px;
     font-size: 1rem;
-    transition: all 0.3s ease;
     background: #f8f9fa;
+    transition: all 0.3s ease;
 }
 
 input:focus, textarea:focus {
@@ -248,10 +257,9 @@ button {
 button:hover {
     background: #2980b9;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Enhanced Footer */
+/* Footer */
 footer {
     background: linear-gradient(135deg, #2c3e50, #34495e);
     color: white;
@@ -265,7 +273,7 @@ footer p {
     opacity: 0.9;
 }
 
-/* Animation for Page Load */
+/* Animation */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -277,24 +285,15 @@ footer p {
     }
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
     header {
         padding: 3rem 1rem;
     }
 
-    header h1 {
-        font-size: 2rem;
-    }
-
-    nav {
-        padding: 1rem 0;
-    }
-
     nav ul {
         flex-direction: column;
         text-align: center;
-        gap: 1rem;
     }
 
     section {
@@ -305,7 +304,7 @@ footer p {
         margin: 0 1rem;
     }
 
-    .skill-tag {
-        padding: 0.6rem 1.2rem;
+    #searchInput {
+        width: 90%;
     }
 }
