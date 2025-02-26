@@ -210,6 +210,27 @@
         "description": "Physical Activity Towards Health and Fitness 2",
         "credit": 2.0
       }
+      {
+        "year_level": "3rd",
+        "sem": "1st",
+        "code": "IT312",
+        "description": "Networking 2",
+        "credit": 3.0
+      },
+      {
+        "year_level": "3rd",
+        "sem": "1st",
+        "code": "ES211a",
+        "description": "Technopreneurship",
+        "credit": 3.0
+      },
+      {
+        "year_level": "3rd",
+        "sem": "2nd",
+        "code": "PICPE",
+        "description": "Philippine Indigenous Communities and Peace Education",
+        "credit": 3.0
+      }
     ]
   }
   
