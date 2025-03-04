@@ -3,8 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const tableBody = document.querySelector("#subjects-table");
     const searchInput = document.getElementById("searchInput");
-    const jsonUrl = "https://wlasah.github.io/portfolio/courses.json"; // Update if needed
-
+    const jsonUrl = "https://wlasah.github.io/portfolio/courses.json";
     if (!tableBody) {
         console.error("Error: Table body not found!");
         return;
@@ -40,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
             tableBody.appendChild(row);
         });
 
-        // Improved search: Check all table columns
+        // Enable search functionality for all columns
         searchInput.addEventListener("input", function () {
             const searchTerm = searchInput.value.toLowerCase();
             const rows = tableBody.getElementsByTagName("tr");
