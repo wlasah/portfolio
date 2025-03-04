@@ -1,15 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Script is running...");
 
-    const tableBody = document.querySelector("#subjects-table tbody");
+    const tableBody = document.querySelector("#subjects-table");
     const searchInput = document.getElementById("searchInput");
-    const jsonUrl = "https://wlasah.github.io/portfolio/courses.json";
+    const jsonUrl = "https://wlasah.github.io/portfolio/courses.json"; // Update if needed
 
     if (!tableBody) {
         console.error("Error: Table body not found!");
         return;
     }
 
+    // Fetch the subjects from JSON
     fetch(jsonUrl)
         .then(response => {
             if (!response.ok) throw new Error("Network response was not ok " + response.statusText);
@@ -19,10 +20,13 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log("Data fetched successfully:", data);
             loadSubjects(data.courses);
         })
-        .catch(error => console.error("Error fetching the JSON file:", error));
+        .catch(error => {
+            console.error("Error fetching the JSON file:", error);
+            alert("Failed to load subjects. Check console for details.");
+        });
 
     function loadSubjects(courses) {
-        tableBody.innerHTML = "";
+        tableBody.innerHTML = ""; // Clear existing rows
 
         courses.forEach(course => {
             const row = document.createElement("tr");
@@ -36,13 +40,24 @@ document.addEventListener("DOMContentLoaded", function () {
             tableBody.appendChild(row);
         });
 
+        // Improved search: Check all table columns
         searchInput.addEventListener("input", function () {
             const searchTerm = searchInput.value.toLowerCase();
             const rows = tableBody.getElementsByTagName("tr");
 
             for (let row of rows) {
-                const description = row.cells[3].textContent.toLowerCase();
-                row.style.display = description.includes(searchTerm) ? "" : "none";
+                let matchFound = false;
+
+                // Loop through all columns in the row
+                for (let i = 0; i < row.cells.length; i++) {
+                    if (row.cells[i].textContent.toLowerCase().includes(searchTerm)) {
+                        matchFound = true;
+                        break; // Stop checking if a match is found
+                    }
+                }
+
+                // Show or hide row based on search match
+                row.style.display = matchFound ? "" : "none";
             }
         });
     }
