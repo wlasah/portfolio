@@ -308,3 +308,33 @@ footer p {
         width: 90%;
     }
 }
+/* Improved Search Bar */
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    width: 50%;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 2px solid #007bff;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Change border color and shadow when focused */
+#searchInput:focus {
+    border-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 91, 187, 0.3);
+}
+
+/* Add a subtle hover effect */
+#searchInput:hover {
+    border-color: #0056b3;
+}
+
